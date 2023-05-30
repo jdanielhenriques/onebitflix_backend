@@ -23,6 +23,7 @@ router.post("/auth/login", authController.login);
 
 router.get("/favorites", ensureAuth, favoritesController.index);
 router.post("/favorites", ensureAuth, favoritesController.save);
+router.delete("/favorites/:id", ensureAuth, favoritesController.delete);
 
 
 export { router };
