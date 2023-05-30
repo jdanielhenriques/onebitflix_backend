@@ -21,6 +21,7 @@ router.get("/episodes/stream", ensureAuthViaQuery, episodesController.stream);
 router.post("/auth/register", authController.register);
 router.post("/auth/login", authController.login);
 
+router.get("/favorites", ensureAuth, favoritesController.index);
 router.post("/favorites", ensureAuth, favoritesController.save);
 
 
